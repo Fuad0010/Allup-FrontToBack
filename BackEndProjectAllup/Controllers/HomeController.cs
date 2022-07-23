@@ -8,5 +8,9 @@ namespace BackEndProjectAllup.Controllers
         {
             return View();
         }
+        public IActionResult Home()
+        {
+            return View();
+        }
     }
 }
