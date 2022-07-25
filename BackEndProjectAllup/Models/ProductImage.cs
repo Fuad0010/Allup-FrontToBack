@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AllupProject.Models
 {
-    internal class ProductImage
+    public class ProductImage
     {
         public int Id { get; set; }
         public string ImageUrl { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AllupProject.Models
 {
-    internal class OrderItem
+    public class OrderItem
     {
         public int Id { get; set; }
         public double Total { get; set; }

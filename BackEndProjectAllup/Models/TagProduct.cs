@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AllupProject.Models
 {
-    internal class TagProduct
+    public class TagProduct
     {
         public int Id { get; set; }
         public int ProductId { get; set; }

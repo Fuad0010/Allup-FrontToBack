@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AllupProject.Models
 {
-    internal class BasketItem
+    public class BasketItem
     {
         public int Id { get; set; }
 
