@@ -8,7 +8,6 @@ namespace AllupProject.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
         public List<Order> Orders { get; set; }
         public List<BasketItem> BasketItems { get; set; }
     }

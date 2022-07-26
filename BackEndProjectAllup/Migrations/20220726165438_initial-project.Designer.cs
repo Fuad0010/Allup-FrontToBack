@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackEndProjectAllup.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220726080525_initial-project")]
+    [Migration("20220726165438_initial-project")]
     partial class initialproject
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -304,6 +304,33 @@ namespace BackEndProjectAllup.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("BackEndProjectAllup.Models.Banner", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Banners");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImgUrl = "banner-1.png"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ImgUrl = "banner-2.png"
+                        });
+                });
+
             modelBuilder.Entity("BackEndProjectAllup.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
@@ -326,6 +353,24 @@ namespace BackEndProjectAllup.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sliders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Desc = "Explore and immerse in exciting 360 content with Fulldive’s all-in-one virtual reality platform",
+                            ImgUrl = "slider-1.jpg",
+                            Name = "<span>4K2020 Virtual Reality</span>Fulldive VR.",
+                            Save = "120"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Desc = "Explore and immerse in exciting 360 content with Fulldive’s all-in-one virtual reality platform",
+                            ImgUrl = "slider-2.jpg",
+                            Name = "<span>4K HDR Smart TV 43 </span>Sony Bravia.",
+                            Save = "120"
+                        });
                 });
 
             modelBuilder.Entity("AllupProject.Models.BasketItem", b =>

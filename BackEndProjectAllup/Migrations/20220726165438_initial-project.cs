@@ -8,6 +8,19 @@ namespace BackEndProjectAllup.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Banners",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ImgUrl = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Banners", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Brands",
                 columns: table => new
                 {
@@ -256,6 +269,24 @@ namespace BackEndProjectAllup.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Banners",
+                columns: new[] { "Id", "ImgUrl" },
+                values: new object[,]
+                {
+                    { 1, "banner-1.png" },
+                    { 2, "banner-2.png" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Sliders",
+                columns: new[] { "Id", "Desc", "ImgUrl", "Name", "Save" },
+                values: new object[,]
+                {
+                    { 1, "Explore and immerse in exciting 360 content with Fulldive’s all-in-one virtual reality platform", "slider-1.jpg", "<span>4K2020 Virtual Reality</span>Fulldive VR.", "120" },
+                    { 2, "Explore and immerse in exciting 360 content with Fulldive’s all-in-one virtual reality platform", "slider-2.jpg", "<span>4K HDR Smart TV 43 </span>Sony Bravia.", "120" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_BasketItems_ProductId",
                 table: "BasketItems",
@@ -314,6 +345,9 @@ namespace BackEndProjectAllup.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Banners");
+
             migrationBuilder.DropTable(
                 name: "BasketItems");
 

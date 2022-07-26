@@ -15,6 +15,6 @@ namespace AllupProject.Models
         public Nullable<DateTime> UptadetAt { get; set; }
 
         public List<Product> Products { get; set; }
-
+        
     }
 }
