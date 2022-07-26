@@ -1,4 +1,3 @@
-C:\Users\DEZHURIK\Desktop\ASP\HomeWorks\BackEndProjectAllup\BackEndProjectAllup\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\DEZHURIK\Desktop\ASP\HomeWorks\BackEndProjectAllup\BackEndProjectAllup\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\DEZHURIK\Desktop\ASP\HomeWorks\BackEndProjectAllup\BackEndProjectAllup\bin\Debug\netcoreapp3.1\BackEndProjectAllup.exe
 C:\Users\DEZHURIK\Desktop\ASP\HomeWorks\BackEndProjectAllup\BackEndProjectAllup\bin\Debug\netcoreapp3.1\BackEndProjectAllup.deps.json

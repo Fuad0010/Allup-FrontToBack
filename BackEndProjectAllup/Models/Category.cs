@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace AllupProject.Models
@@ -13,6 +14,7 @@ namespace AllupProject.Models
         public Category Parent { get; set; }
         public List<Category> Children { get; set; }
         public string ImageUrl { get; set; }
+        [NotMapped]
         public IFormFile Image { get; set; }
         public bool IsDeleted { get; set; }
         public Nullable<DateTime> CreatedAt { get; set; }

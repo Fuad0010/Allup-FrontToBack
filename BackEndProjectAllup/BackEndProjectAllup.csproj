@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <Compile Remove="Migrations\20220726080743_SliderTable.cs" />
+    <Compile Remove="Migrations\20220726080743_SliderTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using AllupProject.Models;
+using BackEndProjectAllup.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BackEndProjectAllup.DAL
@@ -13,12 +14,13 @@ namespace BackEndProjectAllup.DAL
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }    
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<User> Users { get; set; }
-
+        public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Banner> Banners { get; set; }
 
     }
 }
