@@ -22,7 +22,7 @@ namespace BackEndProjectAllup.Controllers
             HomeVM homeVM = new HomeVM();
             homeVM.Sliders = _context.Sliders.ToList();
             homeVM.Banners = _context.Banners.ToList();
-            
+            homeVM.Categories = _context.Categories.ToList();
 
             return View(homeVM);
         }

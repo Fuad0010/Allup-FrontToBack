@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackEndProjectAllup.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220726165438_initial-project")]
+    [Migration("20220727104523_initial-project")]
     partial class initialproject
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

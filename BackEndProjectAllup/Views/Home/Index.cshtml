@@ -16,7 +16,7 @@
                         <div class="slider-content">
                             <h4 data-animation="fadeInDown" data-delay="0.5s" class="sub-title">Save $@item.Save when you buy</h4>
                             <h1 data-animation="fadeInLeft" data-delay="0.5s" class="main-title ">@Html.Raw(item.Name)</h1>
-                            <p data-animation="fadeInRightBig" data-delay="0.5s">@item.</p>
+                            <p data-animation="fadeInRightBig" data-delay="0.5s">@item.Desc</p>
                             <a data-animation="zoomIn" data-delay="0.5s" class="main-btn " href="single-product.html">Shop Now</a>
                         </div>
                     </div> <!-- container -->
@@ -58,13 +58,23 @@
                 </div>
             </div> <!-- row -->
             <div class="row category-active">
+            @{
+                int a = 0;
+            }
+                @for (var i = 0; i < length; i++)
+               {
+                   
+               }
                 <div class="col-lg-2">
-                    <div class="single-category text-center">
-                        <a target="_blank" href="shop-left-sidebar.html">
-                            <img src="~/assets/images/category-1.jpg" alt="category">
-                            <p>Laptop</p>
-                        </a>
-                    </div> <!-- single category -->
+                    @foreach (var item in Model.Categories)
+                    {
+                        <div class="single-category text-center">
+                            <a target="_blank" href="shop-left-sidebar.html">
+                                <img src="~/assets/images/@item.ImageUrl" alt="category">
+                                <p>@item.Name</p>
+                            </a>
+                        </div> <!-- single category -->
+                    }
                     <div class="single-category text-center">
                         <a target="_blank" href="shop-left-sidebar.html">
                             <img src="~/assets/images/category-2.jpg" alt="category">

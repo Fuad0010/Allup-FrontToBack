@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20220726080743_SliderTable.cs" />
     <Compile Remove="Migrations\20220726080743_SliderTable.Designer.cs" />
+    <Compile Remove="Migrations\20220726165438_initial-project.cs" />
+    <Compile Remove="Migrations\20220726165438_initial-project.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -5137,19 +5137,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fuadft\\.nuget\\packages\\": {}
+    "C:\\Users\\DEZHURIK\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
+      "projectUniqueName": "C:\\Users\\DEZHURIK\\Desktop\\gitclonesss\\1\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
       "projectName": "BackEndProjectAllup",
-      "projectPath": "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
-      "packagesPath": "C:\\Users\\fuadft\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\obj\\",
+      "projectPath": "C:\\Users\\DEZHURIK\\Desktop\\gitclonesss\\1\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
+      "packagesPath": "C:\\Users\\DEZHURIK\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DEZHURIK\\Desktop\\gitclonesss\\1\\BackEndProjectAllup\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\fuadft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DEZHURIK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5210,12 +5215,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.25, 3.1.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5224,7 +5223,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

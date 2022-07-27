@@ -1,4 +1,5 @@
-﻿using BackEndProjectAllup.Models;
+﻿using AllupProject.Models;
+using BackEndProjectAllup.Models;
 using System.Collections.Generic;
 
 namespace BackEndProjectAllup.ViewModels
@@ -7,5 +8,7 @@ namespace BackEndProjectAllup.ViewModels
     {
         public List<Slider> Sliders { get; set; }
         public List<Banner> Banners { get; set; }
+        public List<Category> Categories { get; set; }
+
     }
 }
