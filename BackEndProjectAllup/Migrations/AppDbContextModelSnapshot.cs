@@ -104,6 +104,106 @@ namespace BackEndProjectAllup.Migrations
                     b.HasIndex("ParentId");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImageUrl = "category-1.jpg",
+                            IsDeleted = false,
+                            Name = "Laptop"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ImageUrl = "category-2.jpg",
+                            IsDeleted = false,
+                            Name = "Computer"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ImageUrl = "category-3.jpg",
+                            IsDeleted = false,
+                            Name = "Smartphone"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ImageUrl = "category-4.jpg",
+                            IsDeleted = false,
+                            Name = "Game Consoles"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ImageUrl = "category-5.jpg",
+                            IsDeleted = false,
+                            Name = "Bottoms"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ImageUrl = "category-6.jpg",
+                            IsDeleted = false,
+                            Name = "Tops & Sets"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            ImageUrl = "category-7.jpg",
+                            IsDeleted = false,
+                            Name = "Audio & Video"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ImageUrl = "category-8.jpg",
+                            IsDeleted = false,
+                            Name = "Accessories"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            ImageUrl = "category-9.jpg",
+                            IsDeleted = false,
+                            Name = "Camera"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            ImageUrl = "category-10.jpg",
+                            IsDeleted = false,
+                            Name = "Accessories"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            ImageUrl = "category-11.jpg",
+                            IsDeleted = false,
+                            Name = " Games & Consoles "
+                        },
+                        new
+                        {
+                            Id = 12,
+                            ImageUrl = "category-12.jpg",
+                            IsDeleted = false,
+                            Name = "Video Games"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            ImageUrl = "category-1.jpg",
+                            IsDeleted = false,
+                            Name = "Tops & Sets"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            ImageUrl = "category-2.jpg",
+                            IsDeleted = false,
+                            Name = "Bottoms"
+                        });
                 });
 
             modelBuilder.Entity("AllupProject.Models.Order", b =>

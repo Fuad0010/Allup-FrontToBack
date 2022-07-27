@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Li5KSrlnyeT2QUMvUl7mL0w7LOhUWhVoLmy5026jaB0FYk4uTkirpcSwzzz1FpTptUw8IhMOYHOnfiSbTDzDTg==",
+  "dgSpecHash": "4+2aYiCY7OibfgSwGxg8Q9ZWRgEe6smdGilT6xgQDdgvq1EPwFlX4BbjtCRYZvoih9GSRZ9DOVy1bcGoqsNgCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fuadft\\Desktop\\AdssaFDADSGASDASD\\fdaasgrfhhaethjaEGH\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
+  "projectFilePath": "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fuadft\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.0\\microsoft.aspnetcore.cryptography.internal.3.1.0.nupkg.sha512",
     "C:\\Users\\fuadft\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.0\\microsoft.aspnetcore.cryptography.keyderivation.3.1.0.nupkg.sha512",

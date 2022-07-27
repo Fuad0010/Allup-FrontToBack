@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fuadft\\Desktop\\AdssaFDADSGASDASD\\fdaasgrfhhaethjaEGH\\BackEndProjectAllup\\BackEndProjectAllup.csproj": {}
+    "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\BackEndProjectAllup.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fuadft\\Desktop\\AdssaFDADSGASDASD\\fdaasgrfhhaethjaEGH\\BackEndProjectAllup\\BackEndProjectAllup.csproj": {
+    "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\BackEndProjectAllup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fuadft\\Desktop\\AdssaFDADSGASDASD\\fdaasgrfhhaethjaEGH\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
+        "projectUniqueName": "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
         "projectName": "BackEndProjectAllup",
-        "projectPath": "C:\\Users\\fuadft\\Desktop\\AdssaFDADSGASDASD\\fdaasgrfhhaethjaEGH\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
+        "projectPath": "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
         "packagesPath": "C:\\Users\\fuadft\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fuadft\\Desktop\\AdssaFDADSGASDASD\\fdaasgrfhhaethjaEGH\\BackEndProjectAllup\\obj\\",
+        "outputPath": "C:\\Users\\fuadft\\Source\\Repos\\Allup-FrontToBack\\BackEndProjectAllup\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fuadft\\AppData\\Roaming\\NuGet\\NuGet.Config",

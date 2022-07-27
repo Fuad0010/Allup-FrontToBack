@@ -274,8 +274,29 @@ namespace BackEndProjectAllup.Migrations
                 columns: new[] { "Id", "ImgUrl" },
                 values: new object[,]
                 {
-                    { 1, "banner-1.png" },
-                    { 2, "banner-2.png" }
+                    { 2, "banner-2.png" },
+                    { 1, "banner-1.png" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "Id", "CreatedAt", "DeletedAt", "ImageUrl", "IsDeleted", "Name", "ParentId", "UptadetAt" },
+                values: new object[,]
+                {
+                    { 1, null, null, "category-1.jpg", false, "Laptop", null, null },
+                    { 14, null, null, "category-2.jpg", false, "Bottoms", null, null },
+                    { 13, null, null, "category-1.jpg", false, "Tops & Sets", null, null },
+                    { 12, null, null, "category-12.jpg", false, "Video Games", null, null },
+                    { 11, null, null, "category-11.jpg", false, " Games & Consoles ", null, null },
+                    { 10, null, null, "category-10.jpg", false, "Accessories", null, null },
+                    { 9, null, null, "category-9.jpg", false, "Camera", null, null },
+                    { 8, null, null, "category-8.jpg", false, "Accessories", null, null },
+                    { 7, null, null, "category-7.jpg", false, "Audio & Video", null, null },
+                    { 6, null, null, "category-6.jpg", false, "Tops & Sets", null, null },
+                    { 5, null, null, "category-5.jpg", false, "Bottoms", null, null },
+                    { 4, null, null, "category-4.jpg", false, "Game Consoles", null, null },
+                    { 3, null, null, "category-3.jpg", false, "Smartphone", null, null },
+                    { 2, null, null, "category-2.jpg", false, "Computer", null, null }
                 });
 
             migrationBuilder.InsertData(
