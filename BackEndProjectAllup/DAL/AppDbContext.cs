@@ -34,7 +34,22 @@ namespace BackEndProjectAllup.DAL
                 new Banner { Id = 1, ImgUrl = "banner-1.png" },
                 new Banner { Id = 2, ImgUrl = "banner-2.png" }
             );
-
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = 1, ImageUrl = "category-1.jpg", Name = "Laptop" },
+                new Category { Id = 2, ImageUrl = "category-2.jpg", Name = "Computer" },
+                new Category { Id = 3, ImageUrl = "category-3.jpg", Name = "Smartphone" },
+                new Category { Id = 4, ImageUrl = "category-4.jpg", Name = "Game Consoles" },
+                new Category { Id = 5, ImageUrl = "category-5.jpg", Name = "Bottoms" },
+                new Category { Id = 6, ImageUrl = "category-6.jpg", Name = "Tops & Sets" },
+                new Category { Id = 7, ImageUrl = "category-7.jpg", Name = "Audio & Video" },
+                new Category { Id = 8, ImageUrl = "category-8.jpg", Name = "Accessories" },
+                new Category { Id = 9, ImageUrl = "category-9.jpg", Name = "Camera" },
+                new Category { Id = 10, ImageUrl = "category-10.jpg", Name = "Accessories" },
+                new Category { Id = 11, ImageUrl = "category-11.jpg", Name = " Games & Consoles " },
+                new Category { Id = 12, ImageUrl = "category-12.jpg", Name = "Video Games" },
+                new Category { Id = 13, ImageUrl = "category-1.jpg", Name = "Tops & Sets" },
+                new Category { Id = 14, ImageUrl = "category-2.jpg", Name = "Bottoms" }
+                );
 
 
         }

@@ -58,30 +58,25 @@
                 </div>
             </div> <!-- row -->
             <div class="row category-active">
-            @{
-                int a = 0;
-            }
-                @for (var i = 0; i < length; i++)
-               {
-                   
-               }
-                <div class="col-lg-2">
-                    @foreach (var item in Model.Categories)
-                    {
-                        <div class="single-category text-center">
-                            <a target="_blank" href="shop-left-sidebar.html">
-                                <img src="~/assets/images/@item.ImageUrl" alt="category">
-                                <p>@item.Name</p>
-                            </a>
-                        </div> <!-- single category -->
-                    }
-                    <div class="single-category text-center">
-                        <a target="_blank" href="shop-left-sidebar.html">
-                            <img src="~/assets/images/category-2.jpg" alt="category">
-                            <p>Computer</p>
-                        </a>
-                    </div> <!-- single category -->
-                </div>
+                @{
+                    double CategoryCount = 0;
+                    CategoryCount += Model.Categories.Count;
+                    CategoryCount /= 2;
+                }
+                @for (var i = 0; i < CategoryCount; i++)
+                {
+                    <div class="col-lg-2">
+                        @foreach (var item in Model.Categories)
+                        {
+                            <div class="single-category text-center">
+                                <a target="_blank" href="shop-left-sidebar.html">
+                                    <img src="~/assets/images/@item.ImageUrl" alt="category">
+                                    <p>@item.Name</p>
+                                </a>
+                            </div> <!-- single category -->
+                        }
+                    </div>
+                }
                 <div class="col-lg-2">
                     <div class="single-category text-center">
                         <a target="_blank" href="shop-left-sidebar.html">
