@@ -9,6 +9,8 @@ namespace BackEndProjectAllup.ViewModels
         public List<Slider> Sliders { get; set; }
         public List<Banner> Banners { get; set; }
         public List<Category> Categories { get; set; }
-        //public List<>
+        public List<Product> NewArrivals { get; set; }
+        public List<Product> Bestseller { get; set; }
+        public List<Product> Featured { get; set; }
     }
 }

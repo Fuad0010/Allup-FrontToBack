@@ -8,7 +8,7 @@ namespace AllupProject.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
+        public bool IsSecond { get; set; }
         public bool IsFeatured { get; set; }
         public bool BestSeller { get; set; }
         public bool NewArrival { get; set; }

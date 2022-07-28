@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20220726080743_SliderTable.cs" />
-    <Compile Remove="Migrations\20220726080743_SliderTable.Designer.cs" />
-    <Compile Remove="Migrations\20220726165438_initial-project.cs" />
-    <Compile Remove="Migrations\20220726165438_initial-project.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">

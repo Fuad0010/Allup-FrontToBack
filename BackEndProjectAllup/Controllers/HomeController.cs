@@ -19,10 +19,17 @@ namespace BackEndProjectAllup.Controllers
         public IActionResult Index()
         {
 
-            HomeVM homeVM = new HomeVM();
-            homeVM.Sliders = _context.Sliders.ToList();
-            homeVM.Banners = _context.Banners.ToList();
-            homeVM.Categories = _context.Categories.Skip(1).ToList();
+            HomeVM homeVM = new HomeVM()
+            {
+                Sliders = _context.Sliders.ToList(),
+                Banners = _context.Banners.ToList(),
+                Categories = _context.Categories.ToList(),
+                Bestseller = _context.Products.Where(p => p.BestSeller).ToList(),
+                NewArrivals = _context.Products.Where(p=>p.NewArrival).ToList(),
+                Featured = _context.Products.Where(p=>p.IsFeatured).ToList()
+                
+            };
+
             return View(homeVM);
         }
     }

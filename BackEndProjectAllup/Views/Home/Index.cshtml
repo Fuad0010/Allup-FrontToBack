@@ -67,7 +67,6 @@
                         </div> <!-- single category -->
                     </div>
                 }
-            }
         </div> <!-- row -->
     </div> <!-- container -->
 </section>
@@ -99,7 +98,9 @@
                 <div class="product-items">
                     <div class="row product-active">
                         <div class="col-lg-2">
-                            <div class="single-product mt-30">
+                            @foreach (var item in Model.NewArrivals)
+                           {
+                               <div class="single-product mt-30">
                                 <div class="product-image">
                                     <a href="single-product.html">
                                         <img class="first-image" src="~/assets/images/product/product-1.jpg" alt="product">
@@ -126,6 +127,8 @@
                                     </div>
                                 </div>
                             </div> <!-- single product -->
+                           }
+                          
 
                             <div class="single-product mt-30">
                                 <div class="product-image">

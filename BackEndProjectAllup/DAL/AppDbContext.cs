@@ -50,7 +50,9 @@ namespace BackEndProjectAllup.DAL
                 new Category { Id = 13, ImageUrl = "category-1.jpg", Name = "Tops & Sets" },
                 new Category { Id = 14, ImageUrl = "category-2.jpg", Name = "Bottoms" }
                 );
-
+            modelBuilder.Entity<Product>().HasData(
+                new Product { Id = 1, Name = "", IsFeatured = true, }
+                );
 
         }
     }
