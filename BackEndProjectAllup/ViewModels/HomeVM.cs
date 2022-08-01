@@ -12,5 +12,6 @@ namespace BackEndProjectAllup.ViewModels
         public List<Product> NewArrivals { get; set; }
         public List<Product> Bestseller { get; set; }
         public List<Product> Featured { get; set; }
+        public List<ProductImage> ProductImages { get; set; }
     }
 }

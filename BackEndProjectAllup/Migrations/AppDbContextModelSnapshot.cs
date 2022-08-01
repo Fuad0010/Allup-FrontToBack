@@ -273,13 +273,10 @@ namespace BackEndProjectAllup.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("BestSeller")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("BrandId")
+                    b.Property<int?>("BrandId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("CreatedAt")
@@ -294,25 +291,22 @@ namespace BackEndProjectAllup.Migrations
                     b.Property<bool>("InStock")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsBestseller")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsFeatured")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsNewArrival")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("NewArrival")
-                        .HasColumnType("bit");
-
                     b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<int>("StockCount")
-                        .HasColumnType("int");
-
-                    b.Property<double>("TaxPercent")
                         .HasColumnType("float");
 
                     b.Property<DateTime?>("UptadetAt")
@@ -325,6 +319,164 @@ namespace BackEndProjectAllup.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 579, DateTimeKind.Local).AddTicks(5208),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = false,
+                            IsDeleted = false,
+                            IsFeatured = false,
+                            IsNewArrival = true,
+                            Name = "Cale 6 eu accumsan massa facilisis Madden by Steve",
+                            Price = 11.9
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1846),
+                            DiscountPrice = 21.899999999999999,
+                            InStock = false,
+                            IsBestseller = false,
+                            IsDeleted = false,
+                            IsFeatured = false,
+                            IsNewArrival = true,
+                            Name = "Originals Kaval Wind breaker Winter Jacket eu...",
+                            Price = 23.899999999999999
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1869),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = false,
+                            IsDeleted = false,
+                            IsFeatured = false,
+                            IsNewArrival = true,
+                            Name = "Madden by Steve Madden Cale 6 eu accumsan massa...",
+                            Price = 11.9
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1871),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = false,
+                            IsDeleted = false,
+                            IsFeatured = false,
+                            IsNewArrival = true,
+                            Name = "Water and Wind Resistant Insulated Jacket eu massa",
+                            Price = 11.9
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1872),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = true,
+                            IsDeleted = false,
+                            IsFeatured = false,
+                            IsNewArrival = false,
+                            Name = "Juicy Couture Solid Sleeve Puffer Jacket eu accumsan..",
+                            Price = 18.899999999999999
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1874),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = true,
+                            IsDeleted = false,
+                            IsFeatured = false,
+                            IsNewArrival = false,
+                            Name = "Cale 6 eu accumsan massa facilisis Madden by Steve",
+                            Price = 29.899999999999999
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1875),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = true,
+                            IsDeleted = false,
+                            IsFeatured = false,
+                            IsNewArrival = false,
+                            Name = "Winter Jacket eu accumsan massa facili originals Kaval Wind breaker",
+                            Price = 23.899999999999999
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1876),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = true,
+                            IsDeleted = false,
+                            IsFeatured = false,
+                            IsNewArrival = false,
+                            Name = "Juicy Couture Juicy Quilted Terry Track Jacket eu...",
+                            Price = 35.899999999999999
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1877),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = false,
+                            IsDeleted = false,
+                            IsFeatured = true,
+                            IsNewArrival = false,
+                            Name = "Trans-Weight Hooded Wind and Water Resistant Shell",
+                            Price = 11.9
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1879),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = false,
+                            IsDeleted = false,
+                            IsFeatured = true,
+                            IsNewArrival = false,
+                            Name = "New Balance Fresh Foam Kaymin eu accumsan massa...",
+                            Price = 11.9
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1920),
+                            DiscountPrice = 0.0,
+                            InStock = false,
+                            IsBestseller = false,
+                            IsDeleted = false,
+                            IsFeatured = true,
+                            IsNewArrival = false,
+                            Name = "New Balance Fresh Foam LAZR v1 Sport eu accumsan...",
+                            Price = 18.899999999999999
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1936),
+                            DiscountPrice = 26.100000000000001,
+                            InStock = false,
+                            IsBestseller = false,
+                            IsDeleted = false,
+                            IsFeatured = true,
+                            IsNewArrival = false,
+                            Name = "New Balance Arishi Sport v1Couture Juicy eu",
+                            Price = 29.0
+                        });
                 });
 
             modelBuilder.Entity("AllupProject.Models.ProductImage", b =>
@@ -340,6 +492,9 @@ namespace BackEndProjectAllup.Migrations
                     b.Property<bool>("IsMain")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsSecond")
+                        .HasColumnType("bit");
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
@@ -348,6 +503,160 @@ namespace BackEndProjectAllup.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductImages");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImageUrl = "product-1.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ImageUrl = "product-2.jpg",
+                            IsMain = false,
+                            IsSecond = true,
+                            ProductId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ImageUrl = "product-3.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 2
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ImageUrl = "product-4.jpg",
+                            IsMain = false,
+                            IsSecond = true,
+                            ProductId = 2
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ImageUrl = "product-5.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 3
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ImageUrl = "product-6.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 4
+                        },
+                        new
+                        {
+                            Id = 7,
+                            ImageUrl = "product-7.jpg",
+                            IsMain = false,
+                            IsSecond = true,
+                            ProductId = 4
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ImageUrl = "product-8.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 5
+                        },
+                        new
+                        {
+                            Id = 9,
+                            ImageUrl = "product-3.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 6
+                        },
+                        new
+                        {
+                            Id = 10,
+                            ImageUrl = "product-9.jpg",
+                            IsMain = false,
+                            IsSecond = true,
+                            ProductId = 6
+                        },
+                        new
+                        {
+                            Id = 11,
+                            ImageUrl = "product-10.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 7
+                        },
+                        new
+                        {
+                            Id = 12,
+                            ImageUrl = "product-11.jpg",
+                            IsMain = false,
+                            IsSecond = true,
+                            ProductId = 7
+                        },
+                        new
+                        {
+                            Id = 13,
+                            ImageUrl = "product-12.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 8
+                        },
+                        new
+                        {
+                            Id = 14,
+                            ImageUrl = "product-16.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 9
+                        },
+                        new
+                        {
+                            Id = 15,
+                            ImageUrl = "product-6.jpg",
+                            IsMain = false,
+                            IsSecond = true,
+                            ProductId = 9
+                        },
+                        new
+                        {
+                            Id = 16,
+                            ImageUrl = "product-13.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 10
+                        },
+                        new
+                        {
+                            Id = 17,
+                            ImageUrl = "product-14.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 11
+                        },
+                        new
+                        {
+                            Id = 18,
+                            ImageUrl = "product-15.jpg",
+                            IsMain = false,
+                            IsSecond = true,
+                            ProductId = 11
+                        },
+                        new
+                        {
+                            Id = 19,
+                            ImageUrl = "product-9.jpg",
+                            IsMain = true,
+                            IsSecond = false,
+                            ProductId = 12
+                        });
                 });
 
             modelBuilder.Entity("AllupProject.Models.Tag", b =>
@@ -474,7 +783,7 @@ namespace BackEndProjectAllup.Migrations
             modelBuilder.Entity("AllupProject.Models.BasketItem", b =>
                 {
                     b.HasOne("AllupProject.Models.Product", "Product")
-                        .WithMany("BasketItems")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -507,7 +816,7 @@ namespace BackEndProjectAllup.Migrations
                         .IsRequired();
 
                     b.HasOne("AllupProject.Models.Product", "Product")
-                        .WithMany("OrderItems")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -515,17 +824,13 @@ namespace BackEndProjectAllup.Migrations
 
             modelBuilder.Entity("AllupProject.Models.Product", b =>
                 {
-                    b.HasOne("AllupProject.Models.Brand", "Brand")
+                    b.HasOne("AllupProject.Models.Brand", null)
                         .WithMany("Products")
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BrandId");
 
-                    b.HasOne("AllupProject.Models.Category", "Category")
+                    b.HasOne("AllupProject.Models.Category", null)
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
                 });
 
             modelBuilder.Entity("AllupProject.Models.ProductImage", b =>
@@ -540,7 +845,7 @@ namespace BackEndProjectAllup.Migrations
             modelBuilder.Entity("AllupProject.Models.TagProduct", b =>
                 {
                     b.HasOne("AllupProject.Models.Product", "Product")
-                        .WithMany("TagProducts")
+                        .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

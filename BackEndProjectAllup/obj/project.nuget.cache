@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qiMNGPusxodeMDuWVp8hy/B0isAae2pH5R83Wm5wUVDewQ3ekdJPeXUtU6yL6jhg5DW80jfAfW7VdvN1OPZj9w==",
+  "dgSpecHash": "qUgUJoGiylkRP1rpRV0EMzs8lf0m6zfMxZ/SCzBN2xe5ZJGlrBc2uUn+6kI3EOU8wkSK2BHdWwEU6YSz/cYVdA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DEZHURIK\\Desktop\\gitclonesss\\2\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
+  "projectFilePath": "C:\\Users\\DEZHURIK\\Desktop\\gitclonesss\\AllUpProject\\BackEndProjectAllup\\BackEndProjectAllup.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DEZHURIK\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.0\\microsoft.aspnetcore.cryptography.internal.3.1.0.nupkg.sha512",
     "C:\\Users\\DEZHURIK\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.0\\microsoft.aspnetcore.cryptography.keyderivation.3.1.0.nupkg.sha512",

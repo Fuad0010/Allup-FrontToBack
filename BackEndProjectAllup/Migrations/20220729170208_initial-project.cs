@@ -112,19 +112,17 @@ namespace BackEndProjectAllup.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
                     IsFeatured = table.Column<bool>(nullable: false),
-                    BestSeller = table.Column<bool>(nullable: false),
-                    NewArrival = table.Column<bool>(nullable: false),
+                    IsBestseller = table.Column<bool>(nullable: false),
+                    IsNewArrival = table.Column<bool>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
                     InStock = table.Column<bool>(nullable: false),
                     Price = table.Column<double>(nullable: false),
                     DiscountPrice = table.Column<double>(nullable: false),
-                    TaxPercent = table.Column<double>(nullable: false),
-                    StockCount = table.Column<int>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: true),
                     DeletedAt = table.Column<DateTime>(nullable: true),
                     UptadetAt = table.Column<DateTime>(nullable: true),
-                    CategoryId = table.Column<int>(nullable: false),
-                    BrandId = table.Column<int>(nullable: false)
+                    BrandId = table.Column<int>(nullable: true),
+                    CategoryId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -134,13 +132,13 @@ namespace BackEndProjectAllup.Migrations
                         column: x => x.BrandId,
                         principalTable: "Brands",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Products_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -202,6 +200,7 @@ namespace BackEndProjectAllup.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ImageUrl = table.Column<string>(nullable: true),
                     IsMain = table.Column<bool>(nullable: false),
+                    IsSecond = table.Column<bool>(nullable: false),
                     ProductId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -274,8 +273,8 @@ namespace BackEndProjectAllup.Migrations
                 columns: new[] { "Id", "ImgUrl" },
                 values: new object[,]
                 {
-                    { 2, "banner-2.png" },
-                    { 1, "banner-1.png" }
+                    { 1, "banner-1.png" },
+                    { 2, "banner-2.png" }
                 });
 
             migrationBuilder.InsertData(
@@ -287,16 +286,35 @@ namespace BackEndProjectAllup.Migrations
                     { 14, null, null, "category-2.jpg", false, "Bottoms", null, null },
                     { 13, null, null, "category-1.jpg", false, "Tops & Sets", null, null },
                     { 12, null, null, "category-12.jpg", false, "Video Games", null, null },
-                    { 11, null, null, "category-11.jpg", false, " Games & Consoles ", null, null },
                     { 10, null, null, "category-10.jpg", false, "Accessories", null, null },
                     { 9, null, null, "category-9.jpg", false, "Camera", null, null },
-                    { 8, null, null, "category-8.jpg", false, "Accessories", null, null },
+                    { 11, null, null, "category-11.jpg", false, " Games & Consoles ", null, null },
                     { 7, null, null, "category-7.jpg", false, "Audio & Video", null, null },
                     { 6, null, null, "category-6.jpg", false, "Tops & Sets", null, null },
                     { 5, null, null, "category-5.jpg", false, "Bottoms", null, null },
                     { 4, null, null, "category-4.jpg", false, "Game Consoles", null, null },
                     { 3, null, null, "category-3.jpg", false, "Smartphone", null, null },
-                    { 2, null, null, "category-2.jpg", false, "Computer", null, null }
+                    { 2, null, null, "category-2.jpg", false, "Computer", null, null },
+                    { 8, null, null, "category-8.jpg", false, "Accessories", null, null }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "BrandId", "CategoryId", "CreatedAt", "DeletedAt", "DiscountPrice", "InStock", "IsBestseller", "IsDeleted", "IsFeatured", "IsNewArrival", "Name", "Price", "UptadetAt" },
+                values: new object[,]
+                {
+                    { 9, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1877), null, 0.0, false, false, false, true, false, "Trans-Weight Hooded Wind and Water Resistant Shell", 11.9, null },
+                    { 12, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1936), null, 26.100000000000001, false, false, false, true, false, "New Balance Arishi Sport v1Couture Juicy eu", 29.0, null },
+                    { 11, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1920), null, 0.0, false, false, false, true, false, "New Balance Fresh Foam LAZR v1 Sport eu accumsan...", 18.899999999999999, null },
+                    { 10, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1879), null, 0.0, false, false, false, true, false, "New Balance Fresh Foam Kaymin eu accumsan massa...", 11.9, null },
+                    { 8, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1876), null, 0.0, false, true, false, false, false, "Juicy Couture Juicy Quilted Terry Track Jacket eu...", 35.899999999999999, null },
+                    { 1, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 579, DateTimeKind.Local).AddTicks(5208), null, 0.0, false, false, false, false, true, "Cale 6 eu accumsan massa facilisis Madden by Steve", 11.9, null },
+                    { 6, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1874), null, 0.0, false, true, false, false, false, "Cale 6 eu accumsan massa facilisis Madden by Steve", 29.899999999999999, null },
+                    { 5, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1872), null, 0.0, false, true, false, false, false, "Juicy Couture Solid Sleeve Puffer Jacket eu accumsan..", 18.899999999999999, null },
+                    { 4, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1871), null, 0.0, false, false, false, false, true, "Water and Wind Resistant Insulated Jacket eu massa", 11.9, null },
+                    { 3, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1869), null, 0.0, false, false, false, false, true, "Madden by Steve Madden Cale 6 eu accumsan massa...", 11.9, null },
+                    { 2, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1846), null, 21.899999999999999, false, false, false, false, true, "Originals Kaval Wind breaker Winter Jacket eu...", 23.899999999999999, null },
+                    { 7, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1875), null, 0.0, false, true, false, false, false, "Winter Jacket eu accumsan massa facili originals Kaval Wind breaker", 23.899999999999999, null }
                 });
 
             migrationBuilder.InsertData(
@@ -306,6 +324,32 @@ namespace BackEndProjectAllup.Migrations
                 {
                     { 1, "Explore and immerse in exciting 360 content with Fulldive’s all-in-one virtual reality platform", "slider-1.jpg", "<span>4K2020 Virtual Reality</span>Fulldive VR.", "120" },
                     { 2, "Explore and immerse in exciting 360 content with Fulldive’s all-in-one virtual reality platform", "slider-2.jpg", "<span>4K HDR Smart TV 43 </span>Sony Bravia.", "120" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "ProductImages",
+                columns: new[] { "Id", "ImageUrl", "IsMain", "IsSecond", "ProductId" },
+                values: new object[,]
+                {
+                    { 1, "product-1.jpg", true, false, 1 },
+                    { 17, "product-14.jpg", true, false, 11 },
+                    { 16, "product-13.jpg", true, false, 10 },
+                    { 15, "product-6.jpg", false, true, 9 },
+                    { 14, "product-16.jpg", true, false, 9 },
+                    { 13, "product-12.jpg", true, false, 8 },
+                    { 12, "product-11.jpg", false, true, 7 },
+                    { 11, "product-10.jpg", true, false, 7 },
+                    { 18, "product-15.jpg", false, true, 11 },
+                    { 10, "product-9.jpg", false, true, 6 },
+                    { 8, "product-8.jpg", true, false, 5 },
+                    { 7, "product-7.jpg", false, true, 4 },
+                    { 6, "product-6.jpg", true, false, 4 },
+                    { 5, "product-5.jpg", true, false, 3 },
+                    { 4, "product-4.jpg", false, true, 2 },
+                    { 3, "product-3.jpg", true, false, 2 },
+                    { 2, "product-2.jpg", false, true, 1 },
+                    { 9, "product-3.jpg", true, false, 6 },
+                    { 19, "product-9.jpg", true, false, 12 }
                 });
 
             migrationBuilder.CreateIndex(
