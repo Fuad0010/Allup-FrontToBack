@@ -8,6 +8,11 @@ namespace AllupProject.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        //public bool IsComputer { get; set; }
+        //public bool IsSmartPhone { get; set; }
+        //public bool IsGameConsoles { get; set; }
+
         public bool IsFeatured { get; set; }
         public bool IsBestseller { get; set; }
         public bool IsNewArrival { get; set; }

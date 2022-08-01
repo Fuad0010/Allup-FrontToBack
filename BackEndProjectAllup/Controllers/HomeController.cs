@@ -16,8 +16,7 @@ namespace BackEndProjectAllup.Controllers
         {
             _context = context;
         }
-
-        public IActionResult Index()
+            public IActionResult Index()
         {
 
             HomeVM homeVM = new HomeVM();
