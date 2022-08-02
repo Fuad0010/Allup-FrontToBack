@@ -8,6 +8,46 @@ namespace BackEndProjectAllup.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "AspNetRoles",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedName = table.Column<string>(maxLength: 256, nullable: true),
+                    ConcurrencyStamp = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetRoles", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUsers",
+                columns: table => new
+                {
+                    Id = table.Column<string>(nullable: false),
+                    UserName = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
+                    Email = table.Column<string>(maxLength: 256, nullable: true),
+                    NormalizedEmail = table.Column<string>(maxLength: 256, nullable: true),
+                    EmailConfirmed = table.Column<bool>(nullable: false),
+                    PasswordHash = table.Column<string>(nullable: true),
+                    SecurityStamp = table.Column<string>(nullable: true),
+                    ConcurrencyStamp = table.Column<string>(nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
+                    LockoutEnabled = table.Column<bool>(nullable: false),
+                    AccessFailedCount = table.Column<int>(nullable: false),
+                    Fullname = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Banners",
                 columns: table => new
                 {
@@ -102,6 +142,112 @@ namespace BackEndProjectAllup.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetRoleClaims",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RoleId = table.Column<string>(nullable: false),
+                    ClaimType = table.Column<string>(nullable: true),
+                    ClaimValue = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "AspNetRoles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUserClaims",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(nullable: false),
+                    ClaimType = table.Column<string>(nullable: true),
+                    ClaimValue = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUserClaims", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AspNetUserClaims_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUserLogins",
+                columns: table => new
+                {
+                    LoginProvider = table.Column<string>(nullable: false),
+                    ProviderKey = table.Column<string>(nullable: false),
+                    ProviderDisplayName = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUserLogins", x => new { x.LoginProvider, x.ProviderKey });
+                    table.ForeignKey(
+                        name: "FK_AspNetUserLogins_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUserRoles",
+                columns: table => new
+                {
+                    UserId = table.Column<string>(nullable: false),
+                    RoleId = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
+                    table.ForeignKey(
+                        name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "AspNetRoles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AspNetUserRoles_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUserTokens",
+                columns: table => new
+                {
+                    UserId = table.Column<string>(nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
+                    Value = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
+                    table.ForeignKey(
+                        name: "FK_AspNetUserTokens_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -303,18 +449,18 @@ namespace BackEndProjectAllup.Migrations
                 columns: new[] { "Id", "BrandId", "CategoryId", "CreatedAt", "DeletedAt", "DiscountPrice", "InStock", "IsBestseller", "IsDeleted", "IsFeatured", "IsNewArrival", "Name", "Price", "UptadetAt" },
                 values: new object[,]
                 {
-                    { 9, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1877), null, 0.0, false, false, false, true, false, "Trans-Weight Hooded Wind and Water Resistant Shell", 11.9, null },
-                    { 12, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1936), null, 26.100000000000001, false, false, false, true, false, "New Balance Arishi Sport v1Couture Juicy eu", 29.0, null },
-                    { 11, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1920), null, 0.0, false, false, false, true, false, "New Balance Fresh Foam LAZR v1 Sport eu accumsan...", 18.899999999999999, null },
-                    { 10, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1879), null, 0.0, false, false, false, true, false, "New Balance Fresh Foam Kaymin eu accumsan massa...", 11.9, null },
-                    { 8, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1876), null, 0.0, false, true, false, false, false, "Juicy Couture Juicy Quilted Terry Track Jacket eu...", 35.899999999999999, null },
-                    { 1, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 579, DateTimeKind.Local).AddTicks(5208), null, 0.0, false, false, false, false, true, "Cale 6 eu accumsan massa facilisis Madden by Steve", 11.9, null },
-                    { 6, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1874), null, 0.0, false, true, false, false, false, "Cale 6 eu accumsan massa facilisis Madden by Steve", 29.899999999999999, null },
-                    { 5, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1872), null, 0.0, false, true, false, false, false, "Juicy Couture Solid Sleeve Puffer Jacket eu accumsan..", 18.899999999999999, null },
-                    { 4, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1871), null, 0.0, false, false, false, false, true, "Water and Wind Resistant Insulated Jacket eu massa", 11.9, null },
-                    { 3, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1869), null, 0.0, false, false, false, false, true, "Madden by Steve Madden Cale 6 eu accumsan massa...", 11.9, null },
-                    { 2, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1846), null, 21.899999999999999, false, false, false, false, true, "Originals Kaval Wind breaker Winter Jacket eu...", 23.899999999999999, null },
-                    { 7, null, null, new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1875), null, 0.0, false, true, false, false, false, "Winter Jacket eu accumsan massa facili originals Kaval Wind breaker", 23.899999999999999, null }
+                    { 9, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2616), null, 0.0, false, false, false, true, false, "Trans-Weight Hooded Wind and Water Resistant Shell", 11.9, null },
+                    { 12, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2637), null, 26.100000000000001, false, false, false, true, false, "New Balance Arishi Sport v1Couture Juicy eu", 29.0, null },
+                    { 11, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2618), null, 0.0, false, false, false, true, false, "New Balance Fresh Foam LAZR v1 Sport eu accumsan...", 18.899999999999999, null },
+                    { 10, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2617), null, 0.0, false, false, false, true, false, "New Balance Fresh Foam Kaymin eu accumsan massa...", 11.9, null },
+                    { 8, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2614), null, 0.0, false, true, false, false, false, "Juicy Couture Juicy Quilted Terry Track Jacket eu...", 35.899999999999999, null },
+                    { 1, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 406, DateTimeKind.Local).AddTicks(5538), null, 0.0, false, false, false, false, true, "Cale 6 eu accumsan massa facilisis Madden by Steve", 11.9, null },
+                    { 6, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2611), null, 0.0, false, true, false, false, false, "Cale 6 eu accumsan massa facilisis Madden by Steve", 29.899999999999999, null },
+                    { 5, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2609), null, 0.0, false, true, false, false, false, "Juicy Couture Solid Sleeve Puffer Jacket eu accumsan..", 18.899999999999999, null },
+                    { 4, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2608), null, 0.0, false, false, false, false, true, "Water and Wind Resistant Insulated Jacket eu massa", 11.9, null },
+                    { 3, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2605), null, 0.0, false, false, false, false, true, "Madden by Steve Madden Cale 6 eu accumsan massa...", 11.9, null },
+                    { 2, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2583), null, 21.899999999999999, false, false, false, false, true, "Originals Kaval Wind breaker Winter Jacket eu...", 23.899999999999999, null },
+                    { 7, null, null, new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2612), null, 0.0, false, true, false, false, false, "Winter Jacket eu accumsan massa facili originals Kaval Wind breaker", 23.899999999999999, null }
                 });
 
             migrationBuilder.InsertData(
@@ -351,6 +497,45 @@ namespace BackEndProjectAllup.Migrations
                     { 9, "product-3.jpg", true, false, 6 },
                     { 19, "product-9.jpg", true, false, 12 }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetRoleClaims_RoleId",
+                table: "AspNetRoleClaims",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "RoleNameIndex",
+                table: "AspNetRoles",
+                column: "NormalizedName",
+                unique: true,
+                filter: "[NormalizedName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUserClaims_UserId",
+                table: "AspNetUserClaims",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUserLogins_UserId",
+                table: "AspNetUserLogins",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUserRoles_RoleId",
+                table: "AspNetUserRoles",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "EmailIndex",
+                table: "AspNetUsers",
+                column: "NormalizedEmail");
+
+            migrationBuilder.CreateIndex(
+                name: "UserNameIndex",
+                table: "AspNetUsers",
+                column: "NormalizedUserName",
+                unique: true,
+                filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BasketItems_ProductId",
@@ -411,6 +596,21 @@ namespace BackEndProjectAllup.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "AspNetRoleClaims");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserClaims");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserLogins");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserRoles");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
                 name: "Banners");
 
             migrationBuilder.DropTable(
@@ -427,6 +627,12 @@ namespace BackEndProjectAllup.Migrations
 
             migrationBuilder.DropTable(
                 name: "TagProduct");
+
+            migrationBuilder.DropTable(
+                name: "AspNetRoles");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
                 name: "Orders");

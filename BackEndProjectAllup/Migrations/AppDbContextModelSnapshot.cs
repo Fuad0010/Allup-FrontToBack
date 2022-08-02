@@ -324,7 +324,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 579, DateTimeKind.Local).AddTicks(5208),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 406, DateTimeKind.Local).AddTicks(5538),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = false,
@@ -337,7 +337,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1846),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2583),
                             DiscountPrice = 21.899999999999999,
                             InStock = false,
                             IsBestseller = false,
@@ -350,7 +350,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1869),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2605),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = false,
@@ -363,7 +363,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1871),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2608),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = false,
@@ -376,7 +376,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1872),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2609),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = true,
@@ -389,7 +389,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1874),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2611),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = true,
@@ -402,7 +402,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1875),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2612),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = true,
@@ -415,7 +415,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1876),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2614),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = true,
@@ -428,7 +428,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1877),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2616),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = false,
@@ -441,7 +441,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1879),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2617),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = false,
@@ -454,7 +454,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1920),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2618),
                             DiscountPrice = 0.0,
                             InStock = false,
                             IsBestseller = false,
@@ -467,7 +467,7 @@ namespace BackEndProjectAllup.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2022, 7, 29, 21, 2, 8, 580, DateTimeKind.Local).AddTicks(1936),
+                            CreatedAt = new DateTime(2022, 8, 2, 13, 59, 32, 407, DateTimeKind.Local).AddTicks(2637),
                             DiscountPrice = 26.100000000000001,
                             InStock = false,
                             IsBestseller = false,
@@ -711,6 +711,74 @@ namespace BackEndProjectAllup.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("BackEndProjectAllup.Models.AppUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Fullname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
+                });
+
             modelBuilder.Entity("BackEndProjectAllup.Models.Banner", b =>
                 {
                     b.Property<int>("Id")
@@ -778,6 +846,137 @@ namespace BackEndProjectAllup.Migrations
                             Name = "<span>4K HDR Smart TV 43 </span>Sony Bravia.",
                             Save = "120"
                         });
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedName")
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("AllupProject.Models.BasketItem", b =>
@@ -853,6 +1052,57 @@ namespace BackEndProjectAllup.Migrations
                     b.HasOne("AllupProject.Models.Tag", "Tag")
                         .WithMany("TagProducts")
                         .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("BackEndProjectAllup.Models.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("BackEndProjectAllup.Models.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BackEndProjectAllup.Models.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("BackEndProjectAllup.Models.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
