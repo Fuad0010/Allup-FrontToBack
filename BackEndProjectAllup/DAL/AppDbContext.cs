@@ -1,11 +1,12 @@
 ﻿using AllupProject.Models;
 using BackEndProjectAllup.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace BackEndProjectAllup.DAL
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -26,6 +27,9 @@ namespace BackEndProjectAllup.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+                base.OnModelCreating(modelBuilder);
+            
+            
             modelBuilder.Entity<Slider>().HasData(
                 new Slider { Id = 1, ImgUrl = "slider-1.jpg", Save = "120", Name = "<span>4K2020 Virtual Reality</span>Fulldive VR.", Desc = "Explore and immerse in exciting 360 content with Fulldive’s all-in-one virtual reality platform" },
                 new Slider { Id = 2, ImgUrl = "slider-2.jpg", Save = "120", Name = "<span>4K HDR Smart TV 43 </span>Sony Bravia.", Desc = "Explore and immerse in exciting 360 content with Fulldive’s all-in-one virtual reality platform" }
@@ -87,6 +91,11 @@ namespace BackEndProjectAllup.DAL
                 new ProductImage { Id = 17, ImageUrl = "product-14.jpg", IsMain = true, ProductId = 11 },
                 new ProductImage { Id = 18, ImageUrl = "product-15.jpg", IsMain = false, ProductId = 11, IsSecond = true },
                 new ProductImage { Id = 19, ImageUrl = "product-9.jpg", IsMain = true, ProductId = 12 }
+            
+                
+                
+                
+                
             );
 
         }

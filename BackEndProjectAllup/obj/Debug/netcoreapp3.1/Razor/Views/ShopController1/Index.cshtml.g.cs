@@ -27,7 +27,7 @@ using BackEndProjectAllup.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1ac719577ac6d06b1c56517c280ff90ce5595103", @"/Views/ShopController1/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f5629ae4c5624d84ba2bada42e505e344b5ad7c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dff1c8027d87cd58fb4502f1ce6e724896703868", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_ShopController1_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<HomeVM>
     #nullable disable

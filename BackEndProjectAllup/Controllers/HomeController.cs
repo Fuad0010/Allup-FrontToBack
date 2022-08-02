@@ -1,4 +1,5 @@
-﻿using BackEndProjectAllup.DAL;
+﻿using AllupProject.Models;
+using BackEndProjectAllup.DAL;
 using BackEndProjectAllup.Models;
 using BackEndProjectAllup.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +34,17 @@ namespace BackEndProjectAllup.Controllers
             homeVM.ProductImages = _context.ProductImages.ToList();
 
             return View(homeVM);
+        }
+        public IActionResult Detail(int? id)
+        {
+            if (id==null)
+            {
+                return NotFound();
+            }
+            Product dbProduct = _context.Products.FirstOrDefault(p => p.Id == id);
+            if (dbProduct == null) return NotFound();
+
+            return View(dbProduct);
         }
     }
 }
