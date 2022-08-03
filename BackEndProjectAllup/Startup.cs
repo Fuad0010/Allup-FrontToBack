@@ -68,11 +68,10 @@ namespace BackEndProjectAllup
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapAreaControllerRoute(
-
-
-
-                    );
+                endpoints.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
+                );
 
                 endpoints.MapControllerRoute(
                     name: "default",
