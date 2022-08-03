@@ -3,6 +3,7 @@ using BackEndProjectAllup.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
 namespace BackEndProjectAllup.Controllers
 {
@@ -53,8 +54,45 @@ namespace BackEndProjectAllup.Controllers
                 return View(registerVM);
             }
 
+            await _signInManager.SignInAsync(user, true);
 
             return RedirectToAction("Index","Home");
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task <IActionResult> Login(LoginVM login)
+        {
+            if (!ModelState.IsValid) return View();
+
+            AppUser appUser = _userManager.FindByEmailAsync(login.Email).Result;
+            if(appUser == null)
+            {
+                ModelState.AddModelError("","Email or Password is invalid :(");
+                return View(login);
+            }
+
+            SignInResult result = await _signInManager.PasswordSignInAsync(appUser,login.Password,true,true);
+
+            if (result.IsLockedOut)
+            {
+                ModelState.AddModelError("", "This account Locked :(");
+                return View(login);
+            }
+
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Email or Password is invalid :(");
+                return View(login);
+            }
+
+
+            return RedirectToAction("index","home");
         }
     }
 }
