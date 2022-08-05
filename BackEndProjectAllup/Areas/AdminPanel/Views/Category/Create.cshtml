@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Create Form </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Create Category Form</h4>
+                    <p class="card-description"> Basic form layout </p>
+                    <form class="forms-sample" method="post">
+
+                      <div class="form-group">
+                        <label for="exampleInputConfirmPassword1">Confirm Name</label>
+                        <input name="Name" type="text" class="form-control" id="exampleInputConfirmPassword1" placeholder="Name">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputConfirmPassword1">Confirm ImageUrl</label>
+                        <input name="ImageUrl" type="file" class="form-control" id="exampleInputConfirmPassword1" placeholder="ImageUrl">
+                      </div>
+
+                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                      <a class="btn btn-dark" asp-action="Index">Cancel</a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>

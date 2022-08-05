@@ -21,13 +21,20 @@ using BackEndProjectAllup.Models;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\DEZHURIK\Desktop\gitclonesss\AllUpProject\BackEndProjectAllup\Areas\AdminPanel\Views\_ViewImports.cshtml"
+using AllupProject.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\DEZHURIK\Desktop\gitclonesss\AllUpProject\BackEndProjectAllup\Areas\AdminPanel\Views\_ViewImports.cshtml"
 using BackEndProjectAllup.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4bb993ab088de3b0276f4327c1586a8e824e4502", @"/Areas/AdminPanel/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dff1c8027d87cd58fb4502f1ce6e724896703868", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f22915a5068e452acd11fc3634948c776d76553e", @"/Areas/AdminPanel/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_AdminPanel_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

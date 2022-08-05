@@ -1,8 +1,66 @@
-﻿
+﻿@model List<Category>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
-}
+    int count = 1;
+}   
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Basic Tables </h3>
+              <a class="btn btn-success" asp-action="Create">Add Category</a>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Basic Table</h4>
+                    <p class="card-description"> Add class <code>.table</code>
+                    </p>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Settings</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                              @foreach (var item in Model)
+                             {
+                                <tr>
+                                    <td>@count</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.ImageUrl</td>
+                                    <td><label>
 
-<h1>Index</h1>
+                                    <a asp-action="Update" asp-route-id="@item.Id"><i class="mdi mdi-folder-remove" style="font-size:25px;"></i></a>
+                                    <a asp-action="Detail" asp-route-id="@item.Id"><i class="mdi mdi-account-card-details text-warning" style="font-size:25px;"></i></a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="mdi mdi-delete text-danger" style="font-size:25px;"></i></a>
+                                    </label></td>
 
+                                </tr>
+
+                                count++;
+                             }
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          <!-- partial -->
+        </div>
