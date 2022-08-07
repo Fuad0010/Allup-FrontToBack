@@ -3,6 +3,7 @@ using BackEndProjectAllup.DAL;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace BackEndProjectAllup.Areas.AdminPanel.Controllers
 {
@@ -29,7 +30,20 @@ namespace BackEndProjectAllup.Areas.AdminPanel.Controllers
         [HttpPost]
         public IActionResult Create(Category category)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            return Content($"{category.Name} {category.ImageUrl}");
+        }
+
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null) return NotFound();
+            Category dbCategory = await _context.Categories.FindAsync(id);
+            if(dbCategory == null) return NotFound();
+
+            return View(dbCategory);
         }
     }
 }

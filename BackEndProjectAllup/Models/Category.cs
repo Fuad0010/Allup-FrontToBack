@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -9,10 +10,12 @@ namespace AllupProject.Models
     public class Category
     {
         public int Id { get; set; }
+        [Required,MaxLength(20)]
         public string Name { get; set; }
         public Nullable<int> ParentId { get; set; }
         public Category Parent { get; set; }
         public List<Category> Children { get; set; }
+        [Required]
         public string ImageUrl { get; set; }
         [NotMapped]
         public IFormFile Image { get; set; }

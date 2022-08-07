@@ -1,0 +1,33 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> Create Form </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title text-info">Name:</h5>
+                    <p class="card-title text-primary">@Model.Name</p>
+                    <hr style="border-color:antiquewhite;" />
+                    <h5 class="card-title text-info">Image:</h5>
+                    <p class="text-primary"> 
+                        @Model.ImageUrl
+                    </p>
+                    <a class="btn btn-danger" asp-action="Index">Cancel</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>              

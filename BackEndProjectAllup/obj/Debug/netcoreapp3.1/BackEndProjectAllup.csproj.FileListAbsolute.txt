@@ -459,3 +459,4 @@ C:\Users\DEZHURIK\Desktop\gitclonesss\AllUpProject\BackEndProjectAllup\obj\Debug
 C:\Users\DEZHURIK\Desktop\gitclonesss\AllUpProject\BackEndProjectAllup\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\DEZHURIK\Desktop\gitclonesss\AllUpProject\BackEndProjectAllup\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Category\Index.cshtml.g.cs
 C:\Users\DEZHURIK\Desktop\gitclonesss\AllUpProject\BackEndProjectAllup\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Category\Create.cshtml.g.cs
+C:\Users\DEZHURIK\Desktop\gitclonesss\AllUpProject\BackEndProjectAllup\obj\Debug\netcoreapp3.1\Razor\Areas\AdminPanel\Views\Category\Detail.cshtml.g.cs
